@@ -1,7 +1,7 @@
 # Auto Generated - DO NOT EDIT!
 
-from lk_db.ents.both.census.EntCensusResult2012 import EntCensusResult2012
+from lk_db.ents.both.EntCensusResult import EntCensusResult
 
 
-class EntLivingQuarters(EntCensusResult2012):
+class EntLivingQuarters(EntCensusResult):
     pass
