@@ -30,11 +30,10 @@ from lk_db.ents.both.EntCensusResult import EntCensusResult
 
 class {class_name}(EntCensusResult):
     pass
-            '''
+'''
             class_file = f'src/lk_db/ents/both/census/{class_name}.py'
             filex.write(class_file, class_content)
             log.info(f'Wrote {class_file}')
-            break
 
 
 if __name__ == '__main__':
