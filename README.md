@@ -9,3 +9,4 @@
   * Basic Structure
   * Added more
   * pre auto generate census
+  * testing auto generate

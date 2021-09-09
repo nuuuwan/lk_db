@@ -2,6 +2,7 @@ import os
 
 from utils import filex, timex, www
 
+from lk_db import _utils
 from lk_db._utils import log
 from lk_db.ents.both.EntRegionSnap import EntRegionSnap
 
@@ -20,13 +21,19 @@ class EntCensusResult(EntRegionSnap):
         metadata = EntCensusResult.get_census_metadata()
         for metadatum in metadata.values():
             table_id = metadatum['table_id']
-            class_name = 'Ent' + table_id.replace('_', ' ').title()
-            timex.get_unixtime()
-            class_content = '''# Auto Generated {ut}
+            class_name = 'Ent' + _utils.to_camel(table_id)
+            ut = timex.get_unixtime()
+            class_content = f'''# Auto Generated {ut}
+
+from lk_db.ents.both.EntCensusResult import EntCensusResult
+
+class {class_name}(EntCensusResult):
+    pass
             '''
-            class_file = f'src/lk_db/ents/both/{class_name}'
+            class_file = f'src/lk_db/ents/both/census/{class_name}.py'
             filex.write(class_file, class_content)
             log.info(f'Wrote {class_file}')
+            break
 
 
 if __name__ == '__main__':
