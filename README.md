@@ -8,3 +8,4 @@
   * Initial Files Done
   * Basic Structure
   * Added more
+  * pre auto generate census

@@ -21,3 +21,7 @@ class EntProvince(EntRegion):
                 data_list,
             )
         )
+
+
+if __name__ == '__main__':
+    EntProvince.print_all()
