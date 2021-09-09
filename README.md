@@ -10,3 +10,4 @@
   * Added more
   * pre auto generate census
   * testing auto generate
+  * testing auto generate
