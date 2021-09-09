@@ -22,5 +22,5 @@ class Ent(object):
         return www.read_tsv(cls.get_remote_data_list_url())
 
     @classmethod
-    def print_all(cls):
+    def print_first(cls):
         print(json.dumps(cls.get_data_list()[0], indent=2))
