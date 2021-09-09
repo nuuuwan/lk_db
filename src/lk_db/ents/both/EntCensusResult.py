@@ -22,10 +22,11 @@ class EntCensusResult(EntRegionSnap):
         for metadatum in metadata.values():
             table_id = metadatum['table_id']
             class_name = 'Ent' + _utils.to_camel(table_id)
-            ut = timex.get_unixtime()
+            timex.get_unixtime()
             class_content = f'''# Auto Generated - DO NOT EDIT!
 
 from lk_db.ents.both.EntCensusResult import EntCensusResult
+
 
 class {class_name}(EntCensusResult):
     pass
