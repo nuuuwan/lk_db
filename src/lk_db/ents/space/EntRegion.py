@@ -1,5 +1,5 @@
-from lk_db.ents.Ent import Ent
+from lk_db.ents.space.EntSpace import EntSpace
 
 
-class EntRegion(Ent):
+class EntRegion(EntSpace):
     pass

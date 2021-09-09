@@ -1,3 +1,4 @@
+import json
 import os
 
 from utils import www
@@ -19,3 +20,7 @@ class Ent(object):
     @classmethod
     def get_data_list(cls):
         return www.read_tsv(cls.get_remote_data_list_url())
+
+    @classmethod
+    def print_all(cls):
+        print(json.dumps(cls.get_data_list()[0], indent=2))

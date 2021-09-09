@@ -1,5 +1,5 @@
 from lk_db.ents.Ent import Ent
 
 
-class EntRegionSnap(Ent):
+class EntSpace(Ent):
     pass

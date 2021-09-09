@@ -1,5 +1,6 @@
 from utils import www
 
+from lk_db.ents.space.EntPoint import EntPoint
 from lk_db.ents.space.EntRegion import EntRegion
 
 
@@ -14,15 +15,9 @@ class EntProvince(EntRegion):
                     'name': d['name'],
                     'country_id': d['country_id'],
                     'fips': d['fips'],
-                    'centroid': d['centroid'],
+                    'centroid': EntPoint.norm(d['centroid']),
                     'centroid_altitude': d['centroid_altitude'],
                 },
                 data_list,
             )
         )
-
-
-if __name__ == '__main__':
-    import json
-
-    print(json.dumps(EntProvince.get_data_list()[0], indent=2))
