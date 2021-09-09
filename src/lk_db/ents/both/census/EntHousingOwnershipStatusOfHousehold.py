@@ -1,4 +1,4 @@
-# Auto Generated 1631163764
+# Auto Generated - DO NOT EDIT!
 
 from lk_db.ents.both.EntCensusResult import EntCensusResult
 
