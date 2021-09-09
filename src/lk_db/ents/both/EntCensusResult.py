@@ -25,10 +25,10 @@ class EntCensusResult(EntRegionSnap):
             timex.get_unixtime()
             class_content = f'''# Auto Generated - DO NOT EDIT!
 
-from lk_db.ents.both.EntCensusResult import EntCensusResult
+from lk_db.ents.both.census.EntCensusResult2012 import EntCensusResult2012
 
 
-class {class_name}(EntCensusResult):
+class {class_name}(EntCensusResult2012):
     pass
 '''
             class_file = f'src/lk_db/ents/both/census/{class_name}.py'
